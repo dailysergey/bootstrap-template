@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Comic+Neue:400,700|Gotu&display=swap');
+
+
+:root {
+    /* --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; 
+*/
+    /* Override Variables */
+    --font-family-sans-serif: 'Comic Neue',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    /* Override Bootstrap defaults */
+    --font-family-serif: 'Gotu', sans-serif;
+    --gray-dark:#404040;
+    --light-blue: #e1f7f5;
+    --light-purple: #c290d2;
+    --purple:#53377;
+    --color-text:var(--gray-dark);
+    --font-family-text:var(--font-family-serif);
+}
+
+.family-sans{
+    font-family: var(--font-family-sans-serif);
+}
+
+
+body{
+    font-family: var(--font-family-serif);
+    color: var(--color-text);
+}
+.icon{
+    display: inline-block;
+    font-size: inherit;
+    overflow: visible;
+    vertical-align: -0.125;
+    text-rendering: auto;
+    fill: gray !important;
+    width: 50px;
+    height: 50px;
+}
+.site-header{
+    background: url(../images/hero.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    font-size: 0.8rem;
+}
+
+.site-header .animated{
+    animation-delay: 1s;
+    animation-duration: 2s;
+}
+
+.site-header .layout-hero{
+    min-height: 50vh;
+}
+.site-nav.inbody{
+    background: var(--secondary);
+}
+
+@media screen and (max-width: 768px){
+    .site-header .navbar-collapse{
+        background-color: rgb(0, 0, 0 .9);
+        padding: 10px;
+    }
+}
+
+.site-header .page-section-title{
+    font-size: 3em;
+    font-family: var(--font-family-sans-serif);
+    font-weight: 200;
+}
+.site-header .page-section-text{
+    font-size: 1.2rem;
+}
+
+.site-header  .nav-link{
+    position: relative;
+    padding-bottom: 0;
+    margin-bottom: 2px;
+}
+
+.site-header  .nav-link:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    max-width: 100px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--yellow);
+    visability:hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-out;
+}
+
+.site-header  .nav-link:hover:before{
+
+    visability:visble;
+    transform: scaleX(1);
+    transition: all 0.3s ease-out;
+}
+
+
+#page-multicolumn{
+    background: var(--light-blue);
+}
+
+.layout-multicolumn .layout-image {
+    transition: all 0.3s ease-out;
+  }
+  
+  .layout-multicolumn .layout-image:hover {
+    transform: scale(1.1) translateY(-3px);
+  }
+
+
+.page-section-header .page-section-title{
+    font-size: 4em;
+    font-family: var(--font-family-sans-serif);
+    font-weight: 200;
+    color: var(--purple);
+}
+.page-section-header .page-section-text{
+    font-size: 1.2em;
+    font-weight: 200;
+}
+.layout-media .layout-image{
+    max-width: 200px;
+}
+.layout-media .layout-title{
+    color: var(--purple);
+    font-family: var(--font-family-sans-serif);
+    font-weight: 200;
+    
+}
+#page-floater{
+    background: var(--light-blue);
+
+}
+
+@media screen and (min-width:768px){
+    page-floater{
+        margin: 150px 0 150px 0;
+    }
+    .layout-floater .layout-container{
+        position: relative;
+    }
+    .layout-floater .layout-image{
+        position: absolute;
+    }
+    .layout-floater .layout-image{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%) rotate(15deg) scale(1.5);   
+    }
+}
+
+.layout-grid .layout-image{
+    background: var(--light-blue);
+}
+
+#page-carousel{
+    background: var(--light-purple);
+}
+
+.layout-social .layout-icon{
+    font-size: 2em;
+}
